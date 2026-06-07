@@ -9,6 +9,7 @@ rag/
 ├── README.md              — Project description, setup guide, how to run
 ├── pyproject.toml         — Project metadata & dependencies (uv/pip)
 ├── config.yaml            — Configuration for models, chunk size, DB settings
+├── .env.example           — Template for required environment variables
 ├── .env                   — API keys and secrets (not pushed to GitHub)
 ├── .gitignore             — Git ignore rules
 │
@@ -49,7 +50,11 @@ uv sync
 
 ### 2. Configure
 
-- Copy `.env` and fill in your API keys
+```bash
+cp .env.example .env
+```
+
+- Fill in your API keys in `.env`
 - Edit `config.yaml` to choose your LLM provider, embedding model, vector DB, etc.
 
 ### 3. Run the API server

@@ -1,0 +1,41 @@
+# RAG Project Configuration
+
+# Chunking settings
+chunking:
+  chunk_size: 512
+  chunk_overlap: 50
+  method: "recursive"  # Options: recursive, character, token
+
+# Embedding settings
+embeddings:
+  provider: "openai"  # Options: openai, gemini, huggingface
+  model: "text-embedding-3-small"  # OpenAI embedding model
+  dimension: 1536
+
+# Vector database settings
+vectordb:
+  provider: "chromadb"  # Options: chromadb, pinecone, faiss
+  collection_name: "rag_collection"
+  persist_directory: "./data/vectordb"
+
+# LLM settings
+llm:
+  provider: "openai"  # Options: openai, gemini, claude
+  model: "gpt-4o-mini"
+  temperature: 0.7
+  max_tokens: 1024
+
+# Retrieval settings
+retrieval:
+  top_k: 5
+  search_type: "similarity"  # Options: similarity, mmr
+
+# API settings
+api:
+  host: "0.0.0.0"
+  port: 8000
+
+# Logging settings
+logging:
+  level: "INFO"
+  log_file: "logs/app.log"

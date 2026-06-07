@@ -1,0 +1,31 @@
+# RAG Application Dependencies
+
+# Core
+fastapi>=0.115.0
+uvicorn>=0.30.0
+pydantic>=2.0.0
+pyyaml>=6.0
+python-dotenv>=1.0.0
+numpy>=1.26.0
+requests>=2.31.0
+
+# LLM Providers
+openai>=1.40.0
+google-generativeai>=0.8.0
+anthropic>=0.34.0
+
+# Embeddings (HuggingFace — optional, uncomment if needed)
+# sentence-transformers>=3.0.0
+
+# Vector Databases
+chromadb>=0.5.0
+faiss-cpu>=1.8.0
+pinecone>=5.0.0
+
+# Document Loading
+PyPDF2>=3.0.0
+pdfplumber>=0.11.0
+beautifulsoup4>=4.12.0
+
+# Testing
+pytest>=8.0.0
